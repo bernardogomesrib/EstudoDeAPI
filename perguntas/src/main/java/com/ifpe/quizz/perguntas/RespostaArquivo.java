@@ -1,6 +1,6 @@
 package com.ifpe.quizz.perguntas;
 
-
+import jakarta.*;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -25,11 +25,14 @@ public class RespostaArquivo {
     private Questao questao;
     public long getId() {
         return id;
-    }public void setId(long id) {
+    }
+    public void setId(long id) {
         this.id = id;
-    }public Questao getQuestao() {
+    }
+    public Questao getQuestao() {
         return questao;
-    }public void setQuestao(Questao questao) {
+    }
+    public void setQuestao(Questao questao) {
         this.questao = questao;
     }
     public RespostaArquivo(){}

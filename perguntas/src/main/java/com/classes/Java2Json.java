@@ -6,9 +6,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import com.google.gson.Gson;
 import com.ifpe.quizz.perguntas.Imagem;
+import com.ifpe.quizz.perguntas.Questao;
 import com.ifpe.quizz.perguntas.RespostaEmTexto;
 import com.ifpe.quizz.perguntas.Texto;
+
+
 
 //import com.google.gson.Gson;
 
@@ -29,16 +33,16 @@ public class Java2Json {
     rsp.add(new RespostaEmTexto("aaaaaaaaaaa", "eu não sei", false));
     rsp.add(new RespostaEmTexto("vou vomitar, é quero scat o nome do livro", "infelizmente uma pessoa chamada Gustavo Scat, ex ator da turma da monica resolveu jogar a carreira de autor dele no lixo por pornografia", true));
 
-	//Questao obj = new Questao(1, "arroto", "peido", 4, "qual é o livro sobre scat e peidos feito pelo autor Gustavo Scat?", imgs, txts, null, rsp, null);
-	//Gson gson = new Gson();
+	Questao obj = new Questao(1, "arroto", "peido", 4,"algum tipo", "qual é o livro sobre scat e peidos feito pelo autor Gustavo Scat?", imgs, txts, null, rsp, null);
+	Gson gson = new Gson();
 
-	// converte objetos Java para JSON e retorna JSON como String
-	//String json = gson.toJson(obj);
+	//converte objetos Java para JSON e retorna JSON como String
+	String json = gson.toJson(obj);
 
 	try {
 		//Escreve Json convertido em arquivo chamado "file.json"
 		FileWriter writer = new FileWriter("file.json");
-	//	writer.write(json);
+		writer.write(json);
 		writer.close();
         //FileReader reader = new FileReader("file.json");
         //BufferedReader bufferedReader = new BufferedReader(reader);

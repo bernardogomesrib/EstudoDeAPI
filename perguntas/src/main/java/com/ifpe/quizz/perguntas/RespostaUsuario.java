@@ -1,5 +1,6 @@
 package com.ifpe.quizz.perguntas;
 
+import jakarta.*;
 //import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

@@ -28,6 +28,10 @@ public class Controller {
     public List<Questao> pegaTudo(){
         return ctrl.findAll();
     }
+    @GetMapping("/pegarRespostas/{questao_id}")
+    public List<RespostaEmTexto> pegaRespostasTextos(@PathVariable long questao_id){
+        return ctrl.resultadoRespostasTexto(questao_id);
+    }
     public ControladorDoBanco getCtrl() {
         return ctrl;
     }

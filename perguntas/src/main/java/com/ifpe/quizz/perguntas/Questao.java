@@ -3,6 +3,7 @@ package com.ifpe.quizz.perguntas;
 
 import java.util.List;
 
+import jakarta.*;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -37,8 +38,10 @@ public class Questao {
     @JoinColumn(name = "Questao_id")
     private List<RespostaFunc>respostaFuncs;
     
-    
     public Questao(){}
+    public Questao(long id){
+        this.id = id;
+    }
     public Questao  (long id,String materia,String assunto,int ordem,String tipo,String pergunta,List<Imagem> imagens,List<Texto> textos,List<RespostaArquivo> respostaArquivos,List<RespostaEmTexto>  respostaEmTextos,List<RespostaFunc> respostaFuncs)
     {
         this.id = id;
@@ -53,7 +56,7 @@ public class Questao {
         this.respostaEmTextos = respostaEmTextos;
         this.tipo = tipo;
 
-    }
+    } 
     public String getTipo() {
         return tipo;
     }
@@ -120,8 +123,6 @@ public class Questao {
     public void setTextos(List<Texto>  textos) {
         this.textos = textos;
     }
-    public Questao(long id) {
-        this.id = id;
-    }
+    
 
 }

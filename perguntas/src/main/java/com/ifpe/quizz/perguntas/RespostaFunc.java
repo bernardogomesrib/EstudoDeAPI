@@ -1,6 +1,6 @@
 package com.ifpe.quizz.perguntas;
 
-
+import jakarta.*;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
