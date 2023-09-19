@@ -1,7 +1,6 @@
 package com.ifpe.quizz.perguntas;
 
 
-//import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -18,7 +17,7 @@ public class RespostaUsuario {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "questao_id")
     private Questao questao_id;
-    private int idUsuario;
+    private long idUsuario;
     private String resposta;
     private String explicacao;
     private boolean correta;
@@ -34,10 +33,10 @@ public class RespostaUsuario {
     public void setQuestao_id(Questao questao_id) {
         this.questao_id = questao_id;
     }
-    public int getIdUsuario() {
+    public long getIdUsuario() {
         return idUsuario;
     }
-    public void setIdUsuario(int idUsuario) {
+    public void setIdUsuario(long idUsuario) {
         this.idUsuario = idUsuario;
     }
     public String getResposta() {
@@ -58,4 +57,4 @@ public class RespostaUsuario {
     public void setCorreta(boolean correta) {
         this.correta = correta;
     }
-    }
+}
