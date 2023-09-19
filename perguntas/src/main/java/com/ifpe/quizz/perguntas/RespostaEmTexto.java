@@ -1,6 +1,6 @@
 package com.ifpe.quizz.perguntas;
 
-import jakarta.*;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -17,7 +17,7 @@ public class RespostaEmTexto {
     private long id;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "questao_id")
-    private Questao questao;
+    private Questao questao_id;
     private String texto;
     private String explicacao;
     private boolean correta;
@@ -27,24 +27,23 @@ public class RespostaEmTexto {
     public void setId(long id) {
         this.id = id;
     }
-    public Questao getQuestao() {
-        return questao;
+    public Questao getQuestao_id() {
+        return questao_id;
     }
-    public void setQuestao(Questao questao) {
-        this.questao = questao;
+    public void setQuestao_id(Questao questao_id) {
+        this.questao_id = questao_id;
     }
-    
-    public RespostaEmTexto(){}
-    public RespostaEmTexto(String texto,String explicacao,boolean correta){
+    public String getTexto() {
+        return texto;
+    }
+    public void setTexto(String texto) {
         this.texto = texto;
-        this.explicacao = explicacao;
-        this.correta = correta;
     }
     public String getExplicacao() {
         return explicacao;
     }
-    public String getTexto() {
-        return texto;
+    public void setExplicacao(String explicacao) {
+        this.explicacao = explicacao;
     }
     public boolean isCorreta() {
         return correta;
@@ -52,10 +51,4 @@ public class RespostaEmTexto {
     public void setCorreta(boolean correta) {
         this.correta = correta;
     }
-    public void setExplicacao(String explicacao) {
-        this.explicacao = explicacao;
     }
-    public void setTexto(String texto) {
-        this.texto = texto;
-    }
-}

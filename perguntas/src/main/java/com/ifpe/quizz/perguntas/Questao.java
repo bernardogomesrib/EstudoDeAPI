@@ -3,7 +3,7 @@ package com.ifpe.quizz.perguntas;
 
 import java.util.List;
 
-import jakarta.*;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -38,9 +38,75 @@ public class Questao {
     @JoinColumn(name = "Questao_id")
     private List<RespostaFunc>respostaFuncs;
     
-    public Questao(){}
-    public Questao(long id){
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
         this.id = id;
+    }
+    public String getMateria() {
+        return materia;
+    }
+    public void setMateria(String materia) {
+        this.materia = materia;
+    }
+    public String getAssunto() {
+        return assunto;
+    }
+    public void setAssunto(String assunto) {
+        this.assunto = assunto;
+    }
+    public String getTipo() {
+        return tipo;
+    }
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    public int getOrdem() {
+        return ordem;
+    }
+    public void setOrdem(int ordem) {
+        this.ordem = ordem;
+    }
+    public String getPergunta() {
+        return pergunta;
+    }
+    public void setPergunta(String pergunta) {
+        this.pergunta = pergunta;
+    }
+    public List<Imagem> getImagens() {
+        return imagens;
+    }
+    public void setImagens(List<Imagem> imagens) {
+        this.imagens = imagens;
+    }
+    public List<Texto> getTextos() {
+        return textos;
+    }
+    public void setTextos(List<Texto> textos) {
+        this.textos = textos;
+    }
+    public List<RespostaArquivo> getRespostaArquivos() {
+        return respostaArquivos;
+    }
+    public void setRespostaArquivos(List<RespostaArquivo> respostaArquivos) {
+        this.respostaArquivos = respostaArquivos;
+    }
+    public List<RespostaEmTexto> getRespostaEmTextos() {
+        return respostaEmTextos;
+    }
+    public void setRespostaEmTextos(List<RespostaEmTexto> respostaEmTextos) {
+        this.respostaEmTextos = respostaEmTextos;
+    }
+    public List<RespostaFunc> getRespostaFuncs() {
+        return respostaFuncs;
+    }
+    public void setRespostaFuncs(List<RespostaFunc> respostaFuncs) {
+        this.respostaFuncs = respostaFuncs;
+    }
+    public Questao(){}
+    public Questao(Object ob){
+        this.id = Long.parseLong(ob.toString());
     }
     public Questao  (long id,String materia,String assunto,int ordem,String tipo,String pergunta,List<Imagem> imagens,List<Texto> textos,List<RespostaArquivo> respostaArquivos,List<RespostaEmTexto>  respostaEmTextos,List<RespostaFunc> respostaFuncs)
     {
@@ -57,72 +123,4 @@ public class Questao {
         this.tipo = tipo;
 
     } 
-    public String getTipo() {
-        return tipo;
-    }
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-    public List<Imagem> getImagens() {
-        return imagens;
-    }
-    public List<RespostaArquivo> getRespostaArquivos() {
-        return respostaArquivos;
-    }
-    public List<RespostaEmTexto> getRespostaEmTextos() {
-        return respostaEmTextos;
-    }
-    public List<RespostaFunc> getRespostaFuncs() {
-        return respostaFuncs;
-    }
-    public List<Texto> getTextos() {
-        return textos;
-    }
-    public String getAssunto() {
-        return assunto;
-    }
-    public long getId() {
-        return id;
-    }
-    public String getMateria() {
-        return materia;
-    }
-    public int getOrdem() {
-        return ordem;
-    }
-    public String getPergunta() {
-        return pergunta;
-    }
-    public void setAssunto(String assunto) {
-        this.assunto = assunto;
-    }
-    public void setId(long id) {
-        this.id = id;
-    }
-    public void setImagens(List<Imagem> imagens) {
-        this.imagens = imagens;
-    }
-    public void setMateria(String materia) {
-        this.materia = materia;
-    }
-    public void setOrdem(int ordem) {
-        this.ordem = ordem;
-    }
-    public void setPergunta(String pergunta) {
-        this.pergunta = pergunta;
-    }
-    public void setRespostaArquivos(List<RespostaArquivo>  respostaArquivos) {
-        this.respostaArquivos = respostaArquivos;
-    }
-    public void setRespostaEmTextos(List<RespostaEmTexto>  respostaEmTextos) {
-        this.respostaEmTextos = respostaEmTextos;
-    }
-    public void setRespostaFuncs(List<RespostaFunc>  respostaFuncs) {
-        this.respostaFuncs = respostaFuncs;
-    }
-    public void setTextos(List<Texto>  textos) {
-        this.textos = textos;
-    }
-    
-
 }

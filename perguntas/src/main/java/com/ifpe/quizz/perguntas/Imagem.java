@@ -17,7 +17,7 @@ public class Imagem {
     private long id;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "questao_id")
-    private Questao questao;
+    private Questao questao_id;
     private String link;
     private String trancricao;
     private int ordem;
@@ -27,35 +27,29 @@ public class Imagem {
     public void setId(long id) {
         this.id = id;
     }
-    public Questao getQuestao() {
-        return questao;
+    public Questao getQuestao_id() {
+        return questao_id;
     }
-    public void setQuestao(Questao questao) {
-        this.questao = questao;
-    }
-    public Imagem(){}
-    public Imagem(String link, String transcricao, int ordem){
-        this.link = link;
-        this.trancricao = transcricao;
-        this.ordem = ordem;
+    public void setQuestao_id(Questao questao_id) {
+        this.questao_id = questao_id;
     }
     public String getLink() {
         return link;
     }
-    public int getOrdem() {
-        return ordem;
+    public void setLink(String link) {
+        this.link = link;
     }
     public String getTrancricao() {
         return trancricao;
     }
-    public void setLink(String link) {
-        this.link = link;
+    public void setTrancricao(String trancricao) {
+        this.trancricao = trancricao;
+    }
+    public int getOrdem() {
+        return ordem;
     }
     public void setOrdem(int ordem) {
         this.ordem = ordem;
     }
-    public void setTrancricao(String trancricao) {
-        this.trancricao = trancricao;
-    }
-    
+   
 }

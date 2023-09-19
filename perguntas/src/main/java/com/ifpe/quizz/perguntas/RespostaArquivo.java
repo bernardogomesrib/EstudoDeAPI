@@ -1,6 +1,7 @@
 package com.ifpe.quizz.perguntas;
 
-import jakarta.*;
+//import org.hibernate.engine.jdbc.env.internal.LobCreationLogging_.logger;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -22,38 +23,12 @@ public class RespostaArquivo {
     private String transcricao;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "questao_id")
-    private Questao questao;
+    private Questao questao_id;
     public long getId() {
         return id;
     }
     public void setId(long id) {
         this.id = id;
-    }
-    public Questao getQuestao() {
-        return questao;
-    }
-    public void setQuestao(Questao questao) {
-        this.questao = questao;
-    }
-    public RespostaArquivo(){}
-    public RespostaArquivo(String link, String tipo, String transcricao, String explicacao, boolean correta){
-        this.link  = link;
-        this.tipo = tipo;
-        this.correta = correta;
-        this.explicacao = explicacao;
-        this.transcricao = transcricao;
-    }
-    public String getExplicacao() {
-        return explicacao;
-    }
-    public String getLink() {
-        return link;
-    }
-    public String getTipo() {
-        return tipo;
-    }
-    public String getTranscricao() {
-        return transcricao;
     }
     public boolean isCorreta() {
         return correta;
@@ -61,16 +36,35 @@ public class RespostaArquivo {
     public void setCorreta(boolean correta) {
         this.correta = correta;
     }
+    public String getExplicacao() {
+        return explicacao;
+    }
     public void setExplicacao(String explicacao) {
         this.explicacao = explicacao;
+    }
+    public String getLink() {
+        return link;
     }
     public void setLink(String link) {
         this.link = link;
     }
+    public String getTipo() {
+        return tipo;
+    }
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+    public String getTranscricao() {
+        return transcricao;
     }
     public void setTranscricao(String transcricao) {
         this.transcricao = transcricao;
     }
+    public Questao getQuestao_id() {
+        return questao_id;
+    }
+    public void setQuestao_id(Questao questao_id) {
+        this.questao_id = questao_id;
+    }
+    
 }

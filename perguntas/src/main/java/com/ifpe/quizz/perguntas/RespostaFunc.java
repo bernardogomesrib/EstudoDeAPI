@@ -1,6 +1,6 @@
 package com.ifpe.quizz.perguntas;
 
-import jakarta.*;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -17,46 +17,39 @@ public class RespostaFunc {
     private long id;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "questao_id")
-    private Questao questao;
+    private Questao questao_id;
     private String func;
     private String explicacao;
     private boolean correta;
-
     public long getId() {
         return id;
     }
     public void setId(long id) {
         this.id = id;
     }
-    public Questao getQuestao() {
-        return questao;
+    public Questao getQuestao_id() {
+        return questao_id;
     }
-    public void setQuestao(Questao questao) {
-        this.questao = questao;
-    }
-    
-    public RespostaFunc(){}
-    public RespostaFunc(String func,String explicacao,boolean correta){
-        this.func = func;
-        this.explicacao = explicacao;
-        this.correta = correta;
-    }
-    public boolean isCorreta() {
-        return correta;
-    }
-    public String getExplicacao() {
-        return explicacao;
+    public void setQuestao_id(Questao questao_id) {
+        this.questao_id = questao_id;
     }
     public String getFunc() {
         return func;
     }
-    public void setCorreta(boolean correta) {
-        this.correta = correta;
+    public void setFunc(String func) {
+        this.func = func;
+    }
+    public String getExplicacao() {
+        return explicacao;
     }
     public void setExplicacao(String explicacao) {
         this.explicacao = explicacao;
     }
-    public void setFunc(String func) {
-        this.func = func;
+    public boolean isCorreta() {
+        return correta;
     }
+    public void setCorreta(boolean correta) {
+        this.correta = correta;
+    }
+    
 }

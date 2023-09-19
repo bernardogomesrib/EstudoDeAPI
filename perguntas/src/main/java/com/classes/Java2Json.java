@@ -2,7 +2,7 @@ package com.classes;
 
 ///import java.io.BufferedReader;
 //import java.io.FileReader;
-import java.io.FileWriter;
+/*import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -12,12 +12,13 @@ import com.ifpe.quizz.perguntas.Questao;
 import com.ifpe.quizz.perguntas.RespostaEmTexto;
 import com.ifpe.quizz.perguntas.Texto;
 
-
+ */
 
 //import com.google.gson.Gson;
 
 public class Java2Json {
-    public static void main(String[] args) {
+  /*
+   *   public static void main(String[] args) {
     String LoremIpsum  = "Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Officia doloribus inventore eveniet dolore maiores error voluptatum hic itaque quam laboriosam molestias architecto, facilis excepturi saepe quidem. Officiis mollitia hic at culpa commodi doloribus ullam tenetur, minima perferendis ea non quod eos blanditiis earum ab obcaecati repudiandae saepe est ipsum! Nostrum.";
     Imagem img = new Imagem("https://th.bing.com/th/id/OIP.33sqHh45IYGkLrgG2W0tAQHaE8", "macaco em uma arvore", 1);
     Imagem img2 = new Imagem("https://th.bing.com/th/id/OIP.sJYw2VSjSr7Nl-1gwcZ90gHaE8", "macaco assustado", 2);
@@ -57,4 +58,5 @@ public class Java2Json {
 	//System.out.println(json);
 
     }
+   */
 }
