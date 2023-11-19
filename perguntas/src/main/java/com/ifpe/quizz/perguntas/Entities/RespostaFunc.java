@@ -1,4 +1,4 @@
-package com.ifpe.quizz.perguntas.Entities;
+package com.ifpe.quizz.perguntas.entities;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -24,5 +24,4 @@ public class RespostaFunc {
     private String func;
     private String explicacao;
     private boolean correta;
-   
 }

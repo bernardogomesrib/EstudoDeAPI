@@ -1,4 +1,4 @@
-package com.ifpe.quizz.perguntas.Repository;
+package com.ifpe.quizz.perguntas.repository;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.ifpe.quizz.perguntas.Entities.RespostaUsuario;
+import com.ifpe.quizz.perguntas.entities.RespostaUsuario;
 
 public interface RepositoryRespostaUsuario extends JpaRepository<RespostaUsuario,Long>{
     @Query("SELECT a FROM RespostaUsuario a WHERE a.questao.id = :idquestao")

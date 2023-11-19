@@ -1,4 +1,4 @@
-package com.ifpe.quizz.perguntas.Entities;
+package com.ifpe.quizz.perguntas.entities;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -23,5 +23,4 @@ public class Texto {
     private String titulo;
     private String texto;
     private int ordem;
-       
 }

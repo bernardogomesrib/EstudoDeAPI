@@ -1,8 +1,8 @@
-package com.ifpe.quizz.perguntas.Repository;
+package com.ifpe.quizz.perguntas.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.ifpe.quizz.perguntas.Entities.RespostaFunc;
+import com.ifpe.quizz.perguntas.entities.RespostaFunc;
 
-public interface RepositoryRespostaEmFunc extends JpaRepository<RespostaFunc,Long> {    
+public interface RepositoryRespostaEmFunc extends JpaRepository<RespostaFunc,Long> {
 }

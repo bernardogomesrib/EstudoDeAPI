@@ -1,6 +1,4 @@
-package com.ifpe.quizz.perguntas.Entities;
-
-
+package com.ifpe.quizz.perguntas.entities;
 
 import java.util.List;
 

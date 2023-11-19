@@ -1,4 +1,4 @@
-package com.ifpe.quizz.perguntas.Entities;
+package com.ifpe.quizz.perguntas.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
