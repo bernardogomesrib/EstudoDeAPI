@@ -18,18 +18,6 @@ import com.ifpe.quizz.perguntas.Repository.RepositoryRespostaUsuario;
 @RestController
 @RequestMapping("/questao")
 public class Controller {
-    /*
-    @Autowired
-    private RepositoryImagem img;
-    @Autowired
-    private RepositoryTexto txt;
-    @Autowired
-    private RepositoryRespostaEmArquivo rxa;
-    @Autowired
-    private RepositoryRespostaEmFunc rsf;
-    @Autowired
-    private RepositoryRespostaEmTexto rtxt;
-     */
     @Autowired
     private RepositoryQuestao rsq;
     @Autowired
@@ -43,16 +31,20 @@ public class Controller {
             return rsq.save(qst);
     }
     @GetMapping("/respostausuario/questao/{id}")
-    public List<RespostaUsuario> pegarRespostasDousuario(@PathVariable long id){
+    public List<RespostaUsuario> pegarRespostasDousuarioPorPergunta(@PathVariable long id){
         return rus.FindByquestao_id(id);
     }
      @GetMapping("/respostausuario/usuario/{id}")
-    public List<RespostaUsuario> pegarRespostasDousuario2(@PathVariable long id){
+    public List<RespostaUsuario> pegarRespostasDousuarioPorUsuario(@PathVariable long id){
         return rus.FindByUsuarioId(id);
     }
-    @GetMapping("/buscar/{materia}/{assunto}")
+    @GetMapping("/buscar/{materia}/{assunto}/")
     public List<Questao> procuraQuestaoporMateriaEAssunto(@PathVariable String materia,@PathVariable String assunto){
         return rsq.findByAssuntoEMateria(materia, assunto);
+    }
+    @GetMapping("/buscar/{materia}/{assunto}/{id}")
+    public Questao procuraQuestaoporMateriaEAssunto(@PathVariable String materia,@PathVariable String assunto,@PathVariable long id){
+        return rsq.findByAssuntoMateriaeId(materia, assunto,id);
     }
    
 }

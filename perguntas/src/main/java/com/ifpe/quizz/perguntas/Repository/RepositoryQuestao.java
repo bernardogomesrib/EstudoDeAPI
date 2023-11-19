@@ -15,5 +15,7 @@ public interface RepositoryQuestao extends JpaRepository<Questao,Long> {
     List<Questao> findByAssunto(@Param("assunto") String assunto);
     @Query("SELECT ob FROM Questao ob WHERE ob.assunto = :assunto AND ob.materia = :materia")
     List<Questao> findByAssuntoEMateria(@Param("materia")String materia, @Param("assunto") String assunto);
+    @Query("SELECT ob FROM Questao ob WHERE ob.assunto = :assunto AND ob.materia = :materia AND id = :id")
+    Questao findByAssuntoMateriaeId(@Param("materia")String materia, @Param("assunto") String assunto,@Param("id")long id);
     
 }
