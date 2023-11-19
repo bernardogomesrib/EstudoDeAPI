@@ -3,12 +3,13 @@ package com.ifpe.quizz.perguntas.Entities;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 @Entity
 public class Questao {
@@ -21,20 +22,20 @@ public class Questao {
     private String tipo;
     private int ordem;
     private String pergunta;
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "Questao_id")
+    @OneToMany(mappedBy = "questao",cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Imagem>imagens;
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "Questao_id")
+    @OneToMany(mappedBy = "questao",cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Texto>textos;
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "Questao_id")
+    @OneToMany(mappedBy = "questao",cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<RespostaArquivo>respostaArquivos;
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "Questao_id")
+    @OneToMany(mappedBy = "questao",cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<RespostaEmTexto>respostaEmTextos;
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "Questao_id")
+    @OneToMany(mappedBy = "questao",cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<RespostaFunc>respostaFuncs;
     
     public long getId() {

@@ -1,10 +1,10 @@
 {
 
-    "materia": "arroto",
-    "assunto": "peido",
+    "materia": "Materia",
+    "assunto": "Assunto",
     "ordem": 4,
-    "pergunta": "qual é o livro sobre scat e peidos feito pelo autor Gustavo Scat?",
-    "tipo":"uma escolha",
+    "pergunta": "Pergunta pergunta pergunta?",
+    "tipo":"default",
     "imagens": [
         {
             "link": "https://th.bing.com/th/id/OIP.33sqHh45IYGkLrgG2W0tAQHaE8",
@@ -34,43 +34,43 @@
         "link":"https://i.imgur.com/54rJAzY.mp4",
         "tipo":".mp4",
         "transcricao":"um boneco pegando fogo",
-        "explicacao":"talvez um peido bem poderoso fosse capaz de fazer isso mas isso não é a resposta",
+        "explicacao":"explicação do porquê esta resposta não é correta",
         "correta":false
       },
       {
         "link":"https://i.imgur.com/wZoIojh.mp4",
         "tipo":".mp4",
         "transcricao":"home falando quente quente quente",
-        "explicacao":"absolutamente repugnante sua falta de capacidade...",
+        "explicacao":"explicação do porquê esta resposta não é correta",
         "correta":false
       }
     ],
     "respostaEmTextos": [
         {
             "texto": "LoremIpsum",
-            "explicacao": "na verdade eu só tô colocando coisas aleatorias",
+            "explicacao": "explicação do porquê esta resposta não é correta",
             "correta": false
         },
         {
-            "texto": "aaaaaaaaaaa",
-            "explicacao": "eu não sei",
+            "texto": "TEXTOOOOOOOOOOOOOOOOO",
+            "explicacao": "explicação do porquê esta resposta não é correta",
             "correta": false
         },
         {
-            "texto": "vou vomitar, é quero scat o nome do livro",
-            "explicacao": "infelizmente uma pessoa chamada Gustavo Scat, ex ator da turma da monica resolveu jogar a carreira de autor dele no lixo por pornografia",
+            "texto": "Esta é a alternativa correta",
+            "explicacao": "Explicação do porquê esta é a resposta correta",
             "correta": true
         }
     ],
     "respostaFuncs": [
       {
         "func":"pow(2,4/2)",
-        "explicacao":"como que 2 elevado ao quadrado seria um livro sobre scat??? você é burro pelo amor de deus...",
+        "explicacao":"explicação do porquê esta resposta não é correta",
         "correta":false
       },
       {
         "func":"log(pow(2,4/2))",
-        "explicacao":"como que log de 2 elevado ao quadrado seria um livro sobre scat??? você é burro pelo amor de deus...",
+        "explicacao":"explicação do porquê esta resposta não é correta",
         "correta":false
       }
       ]

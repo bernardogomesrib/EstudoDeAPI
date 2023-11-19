@@ -15,12 +15,6 @@ import com.ifpe.quizz.perguntas.Entities.RespostaUsuario;
 import com.ifpe.quizz.perguntas.Repository.RepositoryQuestao;
 import com.ifpe.quizz.perguntas.Repository.RepositoryRespostaUsuario;
 
-
-
-
-
-
-
 @RestController
 @RequestMapping("/questao")
 public class Controller {
@@ -44,7 +38,7 @@ public class Controller {
     public Optional<Questao> pegaicarai(@PathVariable long id){
         return rsq.findById(id);
     }
-    @PostMapping("/cadastrar")
+    @PostMapping("/cadastrar/")
     public Questao cadastrar(@RequestBody Questao qst){
             return rsq.save(qst);
     }
