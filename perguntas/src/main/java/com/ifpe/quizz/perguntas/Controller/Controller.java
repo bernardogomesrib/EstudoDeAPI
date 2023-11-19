@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ifpe.quizz.perguntas.Entities.MateriaEAssunto;
 import com.ifpe.quizz.perguntas.Entities.Questao;
 import com.ifpe.quizz.perguntas.Entities.RespostaUsuario;
 import com.ifpe.quizz.perguntas.Repository.RepositoryQuestao;
@@ -46,5 +47,8 @@ public class Controller {
     public Questao procuraQuestaoporMateriaEAssunto(@PathVariable String materia,@PathVariable String assunto,@PathVariable long id){
         return rsq.findByAssuntoMateriaeId(materia, assunto,id);
     }
-   
+    @GetMapping("/informacoes/")
+    public List<MateriaEAssunto> pegaInformacoesdobanco(){
+        return rsq.findMateriaEAssunto();
+    }
 }

@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import com.ifpe.quizz.perguntas.Entities.MateriaEAssunto;
 import com.ifpe.quizz.perguntas.Entities.Questao;
 
 
@@ -17,5 +18,6 @@ public interface RepositoryQuestao extends JpaRepository<Questao,Long> {
     List<Questao> findByAssuntoEMateria(@Param("materia")String materia, @Param("assunto") String assunto);
     @Query("SELECT ob FROM Questao ob WHERE ob.assunto = :assunto AND ob.materia = :materia AND id = :id")
     Questao findByAssuntoMateriaeId(@Param("materia")String materia, @Param("assunto") String assunto,@Param("id")long id);
-    
+    @Query(nativeQuery = true)
+    List<MateriaEAssunto> findMateriaEAssunto(); 
 }

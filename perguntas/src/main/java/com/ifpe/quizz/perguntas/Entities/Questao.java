@@ -11,6 +11,29 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.SqlResultSetMapping;
+import jakarta.persistence.ConstructorResult;
+import jakarta.persistence.ColumnResult;
+import jakarta.persistence.NamedNativeQuery;
+
+
+@SqlResultSetMapping(
+    name = "MateriaEAssuntoMapping",
+    classes = @ConstructorResult(
+        targetClass = MateriaEAssunto.class,
+        columns = {
+            @ColumnResult(name = "materia", type = String.class),
+            @ColumnResult(name = "assunto", type = String.class),
+            @ColumnResult(name = "quantidade", type = Integer.class)
+        }
+    )
+)
+@NamedNativeQuery(
+    name = "Questao.findMateriaEAssunto",
+    query = "SELECT materia, assunto, COUNT(*) as quantidade FROM questao GROUP BY materia, assunto",
+    resultSetMapping = "MateriaEAssuntoMapping"
+)
+
 @Entity
 public class Questao {
     
