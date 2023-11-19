@@ -1,24 +1,23 @@
-package com.ifpe.quizz.perguntas;
+package com.ifpe.quizz.perguntas.Entities;
+
 
 import jakarta.persistence.Column;
-
-//import jakarta.persistence.EmbeddedId;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+
 @Entity
-public class Texto {
+public class RespostaFunc {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private long id;
     @Column(name = "questao_id")
     private long questao_id;
-    private String titulo;
-    private String texto;
-    private int ordem;
+    private String func;
+    private String explicacao;
+    private boolean correta;
     public long getId() {
         return id;
     }
@@ -31,23 +30,23 @@ public class Texto {
     public void setQuestao_id(long questao_id) {
         this.questao_id = questao_id;
     }
-    public String getTitulo() {
-        return titulo;
+    public String getFunc() {
+        return func;
     }
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setFunc(String func) {
+        this.func = func;
     }
-    public String getTexto() {
-        return texto;
+    public String getExplicacao() {
+        return explicacao;
     }
-    public void setTexto(String texto) {
-        this.texto = texto;
+    public void setExplicacao(String explicacao) {
+        this.explicacao = explicacao;
     }
-    public int getOrdem() {
-        return ordem;
+    public boolean isCorreta() {
+        return correta;
     }
-    public void setOrdem(int ordem) {
-        this.ordem = ordem;
+    public void setCorreta(boolean correta) {
+        this.correta = correta;
     }
-       
+    
 }

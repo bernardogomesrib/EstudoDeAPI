@@ -1,8 +1,7 @@
-package com.ifpe.quizz.perguntas;
+package com.ifpe.quizz.perguntas.Entities;
 
 
 import java.util.List;
-
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;

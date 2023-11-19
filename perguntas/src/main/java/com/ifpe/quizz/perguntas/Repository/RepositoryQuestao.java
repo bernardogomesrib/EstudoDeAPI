@@ -6,7 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.ifpe.quizz.perguntas.Questao;
+import com.ifpe.quizz.perguntas.Entities.Questao;
+
 
 public interface RepositoryQuestao extends JpaRepository<Questao,Long> {
     Optional<Questao> findById(Long id);

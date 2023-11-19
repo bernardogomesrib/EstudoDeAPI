@@ -1,4 +1,4 @@
-package com.ifpe.quizz.perguntas;
+package com.ifpe.quizz.perguntas.Entities;
 
 
 import jakarta.persistence.Column;
@@ -7,15 +7,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-
 @Entity
-public class RespostaFunc {
+public class RespostaUsuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private long id;
     @Column(name = "questao_id")
     private long questao_id;
-    private String func;
+    private long idUsuario;
+    private String resposta;
     private String explicacao;
     private boolean correta;
     public long getId() {
@@ -30,11 +30,17 @@ public class RespostaFunc {
     public void setQuestao_id(long questao_id) {
         this.questao_id = questao_id;
     }
-    public String getFunc() {
-        return func;
+    public long getIdUsuario() {
+        return idUsuario;
     }
-    public void setFunc(String func) {
-        this.func = func;
+    public void setIdUsuario(long idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+    public String getResposta() {
+        return resposta;
+    }
+    public void setResposta(String resposta) {
+        this.resposta = resposta;
     }
     public String getExplicacao() {
         return explicacao;
@@ -48,5 +54,4 @@ public class RespostaFunc {
     public void setCorreta(boolean correta) {
         this.correta = correta;
     }
-    
 }

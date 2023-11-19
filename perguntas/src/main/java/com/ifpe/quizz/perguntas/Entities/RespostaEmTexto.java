@@ -1,4 +1,4 @@
-package com.ifpe.quizz.perguntas;
+package com.ifpe.quizz.perguntas.Entities;
 
 
 import jakarta.persistence.Column;

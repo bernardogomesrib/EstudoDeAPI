@@ -1,4 +1,4 @@
-package com.ifpe.quizz.perguntas;
+package com.ifpe.quizz.perguntas.Controller;
 import java.util.List;
 import java.util.Optional;
 
@@ -10,8 +10,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ifpe.quizz.perguntas.Entities.Questao;
+import com.ifpe.quizz.perguntas.Entities.RespostaUsuario;
 import com.ifpe.quizz.perguntas.Repository.RepositoryQuestao;
 import com.ifpe.quizz.perguntas.Repository.RepositoryRespostaUsuario;
+
 
 
 
