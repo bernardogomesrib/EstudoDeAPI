@@ -31,6 +31,10 @@ public class Controller {
     public Questao cadastrar(@RequestBody Questao qst){
             return rsq.save(qst);
     }
+    @GetMapping("/respostasdousuario/{idUsuario}/{idPergunta}")
+    public List<RespostaUsuario> procuraRespostasDoUsuarioParaPegunta(@PathVariable long idUsuario,@PathVariable long idPergunta){
+        return rus.FindRespostaDoUsuarioParaPergunta(idUsuario, idPergunta);
+    }
     @GetMapping("/respostausuario/questao/{id}")
     public List<RespostaUsuario> pegarRespostasDousuarioPorPergunta(@PathVariable long id){
         return rus.FindByquestao_id(id);
@@ -51,4 +55,5 @@ public class Controller {
     public List<MateriaEAssunto> pegaInformacoesdobanco(){
         return rsq.findMateriaEAssunto();
     }
+   
 }
