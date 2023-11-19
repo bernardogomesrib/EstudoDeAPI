@@ -1,14 +1,13 @@
 package com.ifpe.quizz.perguntas;
 
+import jakarta.persistence.Column;
+
 //import org.hibernate.engine.jdbc.env.internal.LobCreationLogging_.logger;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 
 
 @Entity
@@ -21,9 +20,8 @@ public class RespostaArquivo {
     private String link;
     private String tipo;
     private String transcricao;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "questao_id")
-    private Questao questao_id;
+    @Column(name = "questao_id")
+    private long questao_id;
     public long getId() {
         return id;
     }
@@ -60,10 +58,10 @@ public class RespostaArquivo {
     public void setTranscricao(String transcricao) {
         this.transcricao = transcricao;
     }
-    public Questao getQuestao_id() {
+    public long getQuestao_id() {
         return questao_id;
     }
-    public void setQuestao_id(Questao questao_id) {
+    public void setQuestao_id(long questao_id) {
         this.questao_id = questao_id;
     }
     

@@ -1,22 +1,19 @@
 package com.ifpe.quizz.perguntas;
 
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 
 @Entity
 public class RespostaUsuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private long id;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "questao_id")
-    private Questao questao_id;
+    @Column(name = "questao_id")
+    private long questao_id;
     private long idUsuario;
     private String resposta;
     private String explicacao;
@@ -27,10 +24,10 @@ public class RespostaUsuario {
     public void setId(long id) {
         this.id = id;
     }
-    public Questao getQuestao_id() {
+    public long getQuestao_id() {
         return questao_id;
     }
-    public void setQuestao_id(Questao questao_id) {
+    public void setQuestao_id(long questao_id) {
         this.questao_id = questao_id;
     }
     public long getIdUsuario() {

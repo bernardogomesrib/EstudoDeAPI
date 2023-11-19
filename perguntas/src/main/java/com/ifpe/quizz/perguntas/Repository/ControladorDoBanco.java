@@ -1,4 +1,4 @@
-package com.ifpe.quizz.perguntas;
+package com.ifpe.quizz.perguntas.Repository;
 
 
 
@@ -11,6 +11,8 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 import org.springframework.stereotype.Repository;
+
+import com.ifpe.quizz.perguntas.Questao;
 
 
 @Repository
